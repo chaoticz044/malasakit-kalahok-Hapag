@@ -1,0 +1,567 @@
+# English-Cebuano Translations for Malasakit
+# Copyright (C) 2017
+# This file is distributed under the same license as the `malasakit-v1` package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2017.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.25\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-02-25 03:10-0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: CEBUANO\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: QuantitativeQuestion.prompt:1
+msgid "Ito ang dapat na tanong: di ba"
+msgstr ""
+
+#: QuantitativeQuestion.prompt:2
+msgid "Ito ang mga sumusunod na bagay:"
+msgstr ""
+
+#: cafe/settings.py:160
+msgid "English"
+msgstr ""
+
+#: cafe/settings.py:161
+msgid "Bisaya"
+msgstr ""
+
+#: feature_phone/models.py:53
+msgid "Related object ID"
+msgstr ""
+
+#: feature_phone/models.py:138
+#, python-format
+msgid "question fails uniqueness constraint on combined files: %(fields)s"
+msgstr ""
+
+#: feature_phone/models.py:167
+msgid "Prompt ID"
+msgstr ""
+
+#: pcari/models.py:172
+msgid "Score not between min and max"
+msgstr ""
+
+#: pcari/models.py:226
+msgid ""
+"Indicates whether this comment should be reviewed for a lack of constructive "
+"content. Flagged comments will not be displayed to participants."
+msgstr ""
+
+#: pcari/models.py:230
+msgid "One or more comma-separated topics this comment relates to."
+msgstr ""
+
+#: pcari/models.py:233
+msgid ""
+"If this comment is a translation, this field references the original "
+"suggestion."
+msgstr ""
+
+#: pcari/models.py:264
+msgid "One or more comma-separated topics this question relates to."
+msgstr ""
+
+#: pcari/models.py:266
+msgid ""
+"This field determines how questions are ordered. Questions with greater "
+"<tt>order</tt> values are displayed later. Questions without an <tt>order</"
+"tt> are displayed last."
+msgstr ""
+
+#: pcari/models.py:270
+msgid "Indicates whether this question should be asked to users."
+msgstr ""
+
+#: pcari/models.py:313
+msgid "Slider"
+msgstr ""
+
+#: pcari/models.py:314
+msgid "Numeric text"
+msgstr ""
+
+#: pcari/models.py:315
+msgid "Buttons"
+msgstr ""
+
+#: pcari/models.py:320
+msgid "This label describes what the lowest score means."
+msgstr ""
+
+#: pcari/models.py:322
+msgid "This label describes what the greatest score means."
+msgstr ""
+
+#: pcari/models.py:324
+msgid "Maximum score"
+msgstr ""
+
+#: pcari/models.py:326
+msgid "Minimum score"
+msgstr ""
+
+#: pcari/models.py:328 pcari/models.py:366
+msgid "What user interface element should be used."
+msgstr ""
+
+#: pcari/models.py:353
+msgid "Dropdown"
+msgstr ""
+
+#: pcari/models.py:354
+msgid "Multiple choice"
+msgstr ""
+
+#: pcari/models.py:360
+msgid "List of options"
+msgstr ""
+
+#: pcari/models.py:361
+msgid ""
+"The list should be formatted as follows: <tt>[\"Choice A\", \"Choice B\"]</"
+"tt>. Each option is wrapped in double quotation marks. The options are then "
+"separated by commas within the square brackets."
+msgstr ""
+
+#: pcari/models.py:389
+msgid "\"_options_text\" is not a JSON list of strings"
+msgstr ""
+
+#: pcari/models.py:392
+msgid "\"_options_text\" must contain at least one option"
+msgstr ""
+
+#: pcari/models.py:418
+#, python-format
+msgid "\"%(option)s\" is not a valid option"
+msgstr ""
+
+#: pcari/models.py:449
+msgid "A basic administrative unit within a municipality."
+msgstr ""
+
+#: pcari/models.py:451
+msgid "Enabled as input"
+msgstr ""
+
+#: pcari/models.py:452
+msgid ""
+"Indicates whether data collection is occuring at this location, and should "
+"be presented to participants as an answer to residence questions."
+msgstr ""
+
+#: pcari/models.py:492
+msgid "(Empty)"
+msgstr ""
+
+#: pcari/models.py:493 pcari/templates/personal-information.html:89
+msgid "Male"
+msgstr "Lalaki"
+
+#: pcari/models.py:494 pcari/templates/personal-information.html:90
+msgid "Female"
+msgstr "Babae"
+
+#: pcari/models.py:507
+msgid "Unique identifier generated client-side."
+msgstr ""
+
+#: pcari/templates/about.html:5 pcari/templates/about.html:6
+msgid "About CAFÉ"
+msgstr ""
+
+#: pcari/templates/about.html:11
+msgid ""
+"With support from USAID and the Development Impact Lab at UC Berkeley, the "
+"CITRIS Data and Democracy Initiative is developing a new social media "
+"platform that directly engages citizens and communities from developing "
+"regions to collectively assess conditions, needs, and outcomes related to "
+"engineering innovations in humanitarian assistance, solar energy, democracy "
+"and governance, and global health."
+msgstr ""
+
+#: pcari/templates/about.html:21
+msgid ""
+"In contrast to polls and surveys that are extremely valuable for analysts, "
+"<a href=\"http://cafesystem.org/\" target=\"_blank\">CAFÉ</a> is user-"
+"facing: the CAFÉ platform will provide direct, immediate visual feedback to "
+"participants, allowing them to instantly understand where they stand on key "
+"issues with respect to other participants, and encourage open-ended "
+"qualitative responses that can enhance interaction between users. Like a "
+"coffeehouse, we envision CAFÉ as a grassroots, user-friendly, self-"
+"organizing environment that allows the wisdom of crowds to identify, "
+"highlight, and display patterns, trends, and insights as they emerge. To "
+"facilitate interactions, CAFÉ will incorporate techniques from deliberative "
+"polling, collaborative filtering, and multidimensional visualization."
+msgstr ""
+
+#: pcari/templates/about.html:37
+msgid ""
+"Opinion Space, a precursor to CAFÉ that focused on social innovation, has "
+"been used since 2010 by the U.S. State Department. Thousands of participants "
+"from around the world use it to organize, visualize, and analyze "
+"constructive suggestions on foreign policy:"
+msgstr ""
+
+#: pcari/templates/about.html:46
+msgid ""
+"\"Opinion Space will harness the power of connection technologies to provide "
+"a unique forum for international dialogue. This is &#x2026; an opportunity "
+"to extend our engagement beyond the halls of government directly to the "
+"people of the world.\""
+msgstr ""
+
+#: pcari/templates/about.html:52
+msgid "U.S. Secretary of State Hillary Clinton (2010)"
+msgstr ""
+
+#: pcari/templates/about.html:57
+msgid "Recent Papers"
+msgstr ""
+
+#: pcari/templates/about.html:80
+msgid "Available for download from:"
+msgstr ""
+
+#: pcari/templates/about.html:85
+msgid "Developer Resources"
+msgstr ""
+
+#: pcari/templates/about.html:87
+msgid ""
+"Malasakit is a variant of CAFÉ originally intended for assessing disaster "
+"risk reduction strategies in the Phillipines. Malasakit was developed and "
+"deployed through a partnership between UC Berkeley and National University "
+"in the Phillipines through the Philippine-California Advanced Research "
+"Institutes (PCARI) Project."
+msgstr ""
+
+#: pcari/templates/about.html:96
+msgid ""
+"However, Malasakit can be applied to a variety of domains, and has been "
+"designed with the open-source community in mind. The following resources are "
+"available to anyone who would like to contribute to the project:"
+msgstr ""
+
+#: pcari/templates/about.html:104
+msgid "Malasakit web toolkit"
+msgstr ""
+
+#: pcari/templates/about.html:106
+msgid "GitHub repository"
+msgstr ""
+
+#: pcari/templates/about.html:108
+msgid "Issue tracker"
+msgstr ""
+
+#: pcari/templates/about.html:110
+msgid "Wiki documentation"
+msgstr ""
+
+#: pcari/templates/about.html:111
+msgid "a high-level overview of the application architecture"
+msgstr ""
+
+#: pcari/templates/about.html:114
+msgid "Docstring documentation"
+msgstr ""
+
+#: pcari/templates/about.html:115
+msgid "a GitHub pages site autogenerated from comments in the source code"
+msgstr ""
+
+#: pcari/templates/about.html:122
+msgid "Contact Information"
+msgstr ""
+
+#: pcari/templates/about.html:124
+msgid "For inquiries, please contact:"
+msgstr ""
+
+#: pcari/templates/admin/base.html:7 pcari/templates/admin/configuration.html:5
+#: pcari/templates/admin/configuration.html:42
+msgid "Site configuration"
+msgstr ""
+
+#: pcari/templates/admin/base.html:9 pcari/templates/admin/statistics.html:6
+#: pcari/templates/admin/statistics.html:159
+msgid "Statistics"
+msgstr ""
+
+#: pcari/templates/admin/configuration.html:44
+msgid "Change landing page image"
+msgstr ""
+
+#: pcari/templates/admin/configuration.html:47
+msgid "You may use any image file to show on the landing page."
+msgstr ""
+
+#: pcari/templates/admin/configuration.html:54
+#: pcari/templates/admin/configuration.html:71
+#: pcari/templates/quantitative-questions.html:226
+#: pcari/templates/rate-comments.html:51
+msgid "Submit"
+msgstr ""
+
+#: pcari/templates/admin/configuration.html:59
+msgid "Change bloom icon"
+msgstr ""
+
+#: pcari/templates/admin/configuration.html:62
+msgid ""
+"You may use any image file as an icon for the bloom page. Icons will "
+"automatically scale with the width of the page. For this reason, <a href="
+"\"https://www.w3.org/Graphics/SVG/\">Scalable Vector Graphics</a> (<code>."
+"svg</code> files) work best, since they do not lose resolution when expanded."
+msgstr ""
+
+#: pcari/templates/admin/statistics.html:161
+msgid "Quantitative question rating distributions"
+msgstr ""
+
+#: pcari/templates/base.html:59
+msgid "This site uses the Collective Assessment and Feedback Engine (CAFÉ)."
+msgstr ""
+
+#: pcari/templates/base_with_links.html:7
+#, python-format
+msgid ""
+"This site uses the <a href=\"http://cafesystem.org/\" target=\"_blank"
+"\">Collective Assessment and Feedback Engine (CAFÉ)</a>. Learn more about <a "
+"href=\"%(about_url)s\">CAFÉ</a>."
+msgstr ""
+
+#: pcari/templates/end.html:5 pcari/templates/end.html:6
+msgid "Thank You"
+msgstr "Daghang Salamat"
+
+#: pcari/templates/end.html:21
+msgid "We appreciate your participation in the Malasakit program."
+msgstr "Gipakadak-an ang imong kontribusyon. Daghang salamat sa imong pag pakabana"
+
+#: pcari/templates/end.html:24
+msgid "Finish"
+msgstr "Tapos"
+
+#: pcari/templates/landing.html:6
+msgid "Welcome"
+msgstr "Welcome"
+
+#: pcari/templates/landing.html:22
+msgid "How prepared are you in times of disaster?"
+msgstr "Unsa ka ka andam panahon sa kalamidad?"
+
+#: pcari/templates/landing.html:25
+#, python-format
+msgid "%(num_responses)s barangay citizens have responded."
+msgstr "%(num_responses)s nga ka barangay ang nagpakabana."
+
+#: pcari/templates/landing.html:30
+msgid "Join them!"
+msgstr "Makighi-usa na kanila!"
+
+#: pcari/templates/landing.html:39
+msgid "Begin"
+msgstr "Sinugdanan"
+
+#: pcari/templates/nav-buttons.html:7
+#: pcari/templates/quantitative-questions.html:220
+msgid "Previous"
+msgstr ""
+
+#: pcari/templates/nav-buttons.html:14
+msgid "Next"
+msgstr ""
+
+#: pcari/templates/peer-responses.html:6 pcari/templates/peer-responses.html:7
+msgid "Peer Responses"
+msgstr "Tubag sa uban"
+
+#: pcari/templates/peer-responses.html:42
+msgid ""
+"Below, you can see how the other respondents answered the survey questions."
+msgstr "Sa ubos, makita nimo giunsa pagtubag sa ubang partisipante sa survey."
+
+#: pcari/templates/peer-responses.html:51
+#, python-format
+msgid "<strong>%(num_ratings)s</strong> other people answered this question:"
+msgstr "<strong>%(num_ratings)s</strong> Kadaghanon sa mga tawo nga nitubag niiining pangutan:"
+
+#: pcari/templates/peer-responses.html:67
+#, python-format
+msgid "Average answer: <strong>%(mean)s</strong>"
+msgstr "Kasagaran nga tubag: <strong>%(mean)s</strong>"
+
+#: pcari/templates/peer-responses.html:74
+msgid "Your answer:"
+msgstr "Ang imohang tubag: "
+
+#: pcari/templates/peer-responses.html:74
+msgid "Not rated"
+msgstr ""
+
+#: pcari/templates/peer-responses.html:82
+msgid ""
+"There are not enough data to show how your responses compare to those of "
+"others."
+msgstr ""
+
+#: pcari/templates/personal-information.html:67
+#: pcari/templates/personal-information.html:68
+msgid "Personal Information"
+msgstr ""
+
+#: pcari/templates/personal-information.html:73
+msgid ""
+"All questions on this page are strictly optional. Your responses will be "
+"anonymous."
+msgstr ""
+"Dili pinugos ang pagtubag sa mga gipangayo nga impormasyon aning bahina. "
+"Dili pud panganlan ang nagtubag sa mga pangutana."
+
+#: pcari/templates/personal-information.html:81
+msgid "Age"
+msgstr ""
+
+#: pcari/templates/personal-information.html:85
+msgid "Gender"
+msgstr ""
+
+#: pcari/templates/personal-information.html:88
+msgid "Select gender"
+msgstr "Pilion ang Sex"
+
+#: pcari/templates/personal-information.html:95
+msgid "Barangay"
+msgstr ""
+
+#: pcari/templates/personal-information.html:98
+msgid "Select barangay"
+msgstr "Pilion ang barangay"
+
+#: pcari/templates/personal-information.html:103
+msgid "Sector"
+msgstr "Sektor"
+
+#: pcari/templates/personal-information.html:106
+msgid "Piliin ang sector"
+msgstr "Pilion ang sektor"
+
+#: pcari/templates/personal-information.html:107
+msgid "LGBT"
+msgstr ""
+
+#: pcari/templates/personal-information.html:108
+msgid "Senior"
+msgstr ""
+
+#: pcari/templates/personal-information.html:109
+msgid "Kabataan"
+msgstr ""
+
+#: pcari/templates/personal-information.html:110
+msgid "Kababaihan"
+msgstr ""
+
+#: pcari/templates/personal-information.html:111
+msgid "PWD"
+msgstr ""
+
+#: pcari/templates/personal-information.html:112
+msgid "Religious Organization"
+msgstr "Kapunungan sa relihiyon"
+
+#: pcari/templates/personal-information.html:113
+msgid "Wala sa nabanggit"
+msgstr "Uban pa (others)"
+
+#: pcari/templates/qualitative-questions.html:6
+msgid "Ang Iyong mga Idea"
+msgstr "Ang imohang mga ideya"
+
+#: pcari/templates/qualitative-questions.html:7
+msgid "Your Ideas"
+msgstr ""
+
+#: pcari/templates/qualitative-questions.html:53
+msgid "There are no qualitative questions at this time."
+msgstr ""
+
+#: pcari/templates/quantitative-questions.html:6
+#: pcari/templates/quantitative-questions.html:7
+msgid "Profile Questions"
+msgstr "Mga Maihap nga mga Pangutana"
+
+#: pcari/templates/quantitative-questions.html:212
+msgid "Question"
+msgstr ""
+
+#: pcari/templates/quantitative-questions.html:223
+#: pcari/templates/rate-comments.html:48
+msgid "Skip"
+msgstr ""
+
+#: pcari/templates/rate-comments.html:6 pcari/templates/rate-comments.html:7
+msgid "Rate Comments by Other Users"
+msgstr ""
+
+#: pcari/templates/rate-comments.html:17
+msgid ""
+"Each icon below is a comment made by another participant. Comments that are "
+"closer together were authored by participants who answered the previous "
+"questions similarly."
+msgstr "Ang matag icon sa ubos maoy mga suhestiyon nga gihatag sa ubang partisipante. Ang mga suhistiyon nga may-ong sa usag-suag maoy gihatag sa mga partisipanti nga unang nitubag niini."
+
+#: pcari/templates/rate-comments.html:22
+msgid ""
+"Click on an icon to rate a comment on its helpfulness. <strong>You must rate "
+"at least two comments to proceed by clicking \"Next\" below.</strong>"
+msgstr "Pindot ug usa ka icon aron makita nag suhestiyon sa ubang partisipante. Pariha sa unang gihimo, hatagi ug puntos ang matag suhestiyon sugod sa una hantud sa ika unom, kung diin ang usa nagrepresentar sa wala mouyon ug ang unom maoy nagrepresentar sa niuyon. Para makapadayon pindoton ang “susunod” sa ubos."
+
+#: pcari/templates/rate-comments.html:31
+msgid "Ang tanong:"
+msgstr "Mga Pangutana:"
+
+#: pcari/templates/rate-comments.html:33
+msgid "Ang sagot ng iba:"
+msgstr "Ang tubag sa ubang partisipante"
+
+#: pcari/templates/rate-comments.html:39
+msgid "Hindi nakatutulong"
+msgstr "Wala nakatabang"
+
+#: pcari/templates/rate-comments.html:40
+msgid "Nakatutulong"
+msgstr "Nakatabang"
+
+#: pcari/templates/rate-comments.html:43
+msgid "Ang iyong sagot: "
+msgstr "Ang imohang tubag: "
+
+#: pcari/views.py:711
+msgid "Page Not Found"
+msgstr ""
+
+#: pcari/views.py:712
+msgid "The requested page does not appear to exist."
+msgstr ""
+
+#: pcari/views.py:720
+msgid "Internal Error"
+msgstr ""
+
+#: pcari/views.py:721
+msgid ""
+"The server is currently experiencing some issues. Please let the maintainers "
+"know immediately."
+msgstr ""

@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+
+{% load i18n %}
+{% load static %}
+
+{% block title %}{% trans 'Kuwalitatibong Tanong' %}{% endblock %}
+{% block main-heading %}{% trans 'Ang Iyong mga Idea' %}{% endblock %}
+
+{% block scripts %}
+  <script>
+    $(document).ready(function() {
+      displayNoCurrentRespondentError();
+
+      $('input[type=text], textarea').each(function() {
+        var inputElement = $(this);
+        var questionID = inputElement.attr('question-id');
+        var path = ['comments', questionID];
+
+        inputElement.on('input', function() {
+          var text = inputElement.val().trim();
+          setResponseValue(path, text);
+        });
+
+        var comment = getResponseValue(path);
+        if (comment !== undefined) {
+          inputElement.val(comment);
+        }
+      });
+    });
+  </script>
+{% endblock %}
+
+{% block content %}
+  {% if questions %}
+    {% if questions|length > 1 %}
+      <ol id="qualitative-questions">
+        {% for question in questions %}
+          <li>
+            {% trans question.prompt as prompt %}
+            <p class="prompt">{{ prompt|linebreaksbr }}</p>
+            <textarea question-id="{{ question.id }}" class="comment"></textarea>
+          </li>
+        {% endfor %}
+      </ol>
+    {% else %}
+      {% with question=questions.0 %}
+        {% trans question.prompt as prompt %}
+        <p class="prompt">{{ prompt|linebreaksbr }}</p>
+        <textarea question-id="{{ question.id }}" class="comment"></textarea>
+      {% endwith %}
+    {% endif %}
+  {% else %}
+    <p class="error banner">{% trans 'There are no qualitative questions at this time.' %}</p>
+  {% endif %}
+  {% url 'pcari:rate-comments' as previous_link %}
+  {% url 'pcari:peer-responses' as next_link %}
+  {% include 'nav-buttons.html' %}
+{% endblock %}

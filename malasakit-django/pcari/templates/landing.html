@@ -1,0 +1,46 @@
+{% extends 'base_with_links.html' %}
+
+{% load i18n %}
+{% load static %}
+
+{% block title %}{% trans 'Welcome' %}{% endblock %}
+
+{% block scripts %}
+  <script>
+    $(document).ready(function() {
+      $('#next').on('click', function() {
+        startResponse();
+        Resource.delete('selected-comments');
+      });
+    });
+  </script>
+{% endblock %}
+
+{% block content %}
+  <div>
+    <p class="center">
+      {% trans 'Kumusta ang iyong karanasan sa pagkain sa NU cafeteria?' %}
+    </p>
+    <p class="center">
+      {% blocktrans trimmed %}
+        {{ num_responses }} na ang mga kumain at nagbigay ng kanilang karanasan.
+      {% endblocktrans %}
+    </p>
+    <p class="center">
+      {% trans 'Ibahagi mo na rin ang iyong karanasan!' %}
+    </p>
+    <img src="{% static 'img/landing' %}">
+
+  <p align="justify">
+  Ang ​ HAPAG-KAINAN ​ ay isa lang sa mga toolkit na binuo sa ilalim ng E-Participation Project ng
+National University at University of California, Berkeley. Ang proyektong ito ay suportado ng
+Commission on Higher Education (CHED) sa pamamagitan ng Philippine-California Advanced
+Research Institutes (PCARI). Sa pagsagot nitong toolkit, boluntaryo akong nakikibahagi sa
+gawaing ito at batid ko na lahat ng mga impormasyong aking ibibigay ay maaaring gamitin para
+mas lalo pang mapabuti ang mga pasilidad at serbisyo sa NU cafeteria.
+  </p>
+  </div>
+  {% url 'pcari:personal-information' as next_link %}
+  {% trans 'Simulan' as next_label %}
+  {% include 'nav-buttons.html' %}
+{% endblock %}

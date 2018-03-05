@@ -1,0 +1,115 @@
+{% extends 'base.html' %}
+
+{% load i18n %}
+{% load static %}
+
+{% block scripts %}
+  <script>
+    $(document).ready(function() {
+      displayNoCurrentRespondentError();
+
+      function initializeField(inputElement, path, preprocess = x => x) {
+        inputElement.on('input', function() {
+          var value = preprocess($(this).val()) || null;
+          if (value === null) {
+            deleteResponseValue(path);
+          } else {
+            setResponseValue(path, value);
+            inputElement.val(value);
+          }
+        });
+
+        var value = getResponseValue(path);
+        if (value !== undefined) {
+          inputElement.val(value);
+        }
+      }
+
+      var clipAge = makeClipped(1, 120);
+      initializeField($('#age'), ['respondent-data', 'age'], function(rawValue) {
+        var age = parseInt(rawValue);
+        return isNaN(age) ? null : clipAge(age);
+      });
+      initializeField($('#gender'), ['respondent-data', 'gender']);
+
+      setResponseValue(['respondent-data', 'submitted-personal-data'], true);
+
+      var locations = Resource.load('locations').data;
+      for (var id in locations) {
+        var location = locations[id];
+        $('#barangay').append($('<option value="' + id + '">' + location.division + '</option>'));
+      }
+      $('#barangay').append($('<option value="other">' + gettext('Other') + '</option>'));
+      initializeField($('#barangay'), ['respondent-data', 'division']);
+
+      var barangayExpand = function() {
+        if ($('#barangay').val() === 'other') {
+          var row = $('<tr id="barangay-name-row">').append('<td>Barangay Name</td>').append('<td><input type="text" id="barangay-name"></td>');
+          $('#questions').append(row);
+          initializeField($('#barangay-name'), ['respondent-data', 'new-division']);
+        } else {
+          $('#barangay-name-row').remove();
+          deleteResponseValue(['respondent-data', 'new-division']);
+        }
+      };
+      $('#barangay').on('input', barangayExpand);
+      barangayExpand();
+
+      initializeField($('#sector'), ['respondent-data', 'sector']);
+
+      $('#next > a').on('click', function(event) {
+        setResponseValue(['respondent-data', 'completed-survey'], true);
+      });
+    });
+  </script>
+{% endblock %}
+
+{% block title %}{% trans 'Personal na Impormasyon' %}{% endblock %}
+{% block main-heading %}{% trans 'Personal na Impormasyon' %}{% endblock %}
+
+{% block content %}
+  <div class="container">
+    <p class="center">
+      {% blocktrans trimmed %}
+        Hindi sapilitan ang pagsagot sa lahat ng item sa pahinang ito. Hindi rin papangalanan ang iyong mga tugon.
+      {% endblocktrans %}
+    </p>
+  <table style="margin: 0 auto;">
+    <tbody id="questions">
+      <tr>
+        <td>{% trans 'Edad' %}</td>
+        <td><input id="age" type="number" min="1" max="120" onkeypress="validatePositiveInteger(event)"></td>
+      </tr>
+      <tr>
+        <td>{% trans 'Kasarian' %}</td>
+        <td>
+          <select id="gender">
+            <option value="M" selected>{% trans 'Male' %}</option>
+            <option value="F">{% trans 'Female' %}</option>
+          </select>
+        </td>
+      </tr>
+<!--      <tr>
+        <td>{% trans 'Barangay' %}</td>
+        <td>
+          <select id="barangay">
+            <option value="" selected>{% trans 'Select barangay' %}</option>
+          </select>
+        </td>
+      </tr> -->
+      <tr>
+        <td>{% trans 'Sector' %}</td>
+        <td>
+          <select id="sector">
+            <option value="" selected>{% trans 'Piliin ang tanggapan' %}</option>
+            <option value="Academic">{% trans 'Academic' %}</option>
+            <option value="Non-academic">{% trans 'Non-academic' %}</option>
+            <option value="Student">{% trans 'Student' %}</option>
+          </select>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  {% url 'pcari:quantitative-questions' as next_link %}
+  {% include 'nav-buttons.html' %}
+{% endblock %}

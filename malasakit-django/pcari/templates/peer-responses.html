@@ -1,0 +1,86 @@
+{% extends 'base.html' %}
+
+{% load i18n %}
+{% load static %}
+
+{% block title %}{% trans 'Tugon ng iba' %}{% endblock %}
+{% block main-heading %}{% trans 'Tugon ng iba' %}{% endblock %}
+
+{% block scripts %}
+  <script>
+    $(document).ready(function() {
+      displayNoCurrentRespondentError();
+
+      var current = Resource.load('current');
+      pushResponse(Resource.load(current.data), false);
+
+      var ratings = getResponseValue(['question-ratings']);
+      for (var id in ratings) {
+        var score = ratings[id];
+        if (score !== SKIPPED) {
+          $('#answer-' + id).text(score);
+          if (score < 1) {
+            var emoticon = '/img/red-emoticon.png';
+          } else if (score < 2) {
+            var emoticon = '/img/yellow-emoticon.jpg';
+          } else {
+            var emoticon = '/img/green-emoticon.png'
+          }
+          $('#answer-' + id).parent().prepend($('<img>').attr('src', STATIC_URL_ROOT + emoticon));
+        } else {
+          $('#answer-' + id).text(gettext('Skipped'));
+          $('#answer-' + id).parent().prepend($('<img>').attr('src', STATIC_URL_ROOT + '/img/yellow-emoticon.jpg'));
+        }
+      }
+    });
+  </script>
+{% endblock %}
+
+{% block content %}
+  {% if questions %}
+    <p>
+      {% blocktrans trimmed %}
+        Sa ibaba, makikita mo kung paano sumagot ang iba pang mga kalahok sa mga tanong sa sarbey.
+      {% endblocktrans %}
+    </p>
+    <div id="peer-responses">
+      {% for question in questions %}
+        {% with num_ratings=question.num_ratings mean=question.mean_score|floatformat %}
+          <div class="boxed">
+            <p>
+              {% blocktrans trimmed %}
+                <strong>{{ num_ratings }}</strong> katao na ang sumagot sa tanong na ito:
+              {% endblocktrans %}
+            </p>
+            <blockquote>
+              {% trans question.prompt %}
+            </blockquote>
+            {% if num_ratings %}
+              <div class="bubbled">
+                {% if question.mean_score <= 1.000 %}
+                  <img src="{% static 'img/red-emoticon.png' %}">
+                {% elif question.mean_score <= 2.000 %}
+                  <img src="{% static 'img/yellow-emoticon.jpg' %}">
+                {% else %}
+                  <img src="{% static 'img/green-emoticon.png' %}">
+                {% endif %}
+                {% blocktrans trimmed %}
+                  Karaniwang tugon: <strong>{{ mean }}</strong>
+                {% endblocktrans %}
+              </div>
+            {% endif %}
+            <div class="bubbled">
+              {% with id=question.id %}
+                {% trans 'Ang iyong tugon:'%} <strong id="answer-{{ id }}">{% trans 'Walang tugon' %}</strong>
+              {% endwith %}
+            </div>
+          </div>
+        {% endwith %}
+      {% endfor %}
+    </div>
+  {% else %}
+    <p class="error banner">{% trans 'There are not enough data to show how your responses compare to those of others.' %}</p>
+  {% endif %}
+  {% url 'pcari:end' as next_link %}
+  {% include 'nav-buttons.html' %}
+{% endblock %}

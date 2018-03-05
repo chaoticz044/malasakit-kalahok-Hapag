@@ -1,0 +1,25 @@
+{% extends 'base_with_links.html' %}
+
+{% load i18n %}
+
+{% block title %}{% trans 'Maraming Salamat' %}{% endblock %}
+{% block main-heading %}{% trans 'Maraming Salamat' %}{% endblock %}
+
+{% block scripts %}
+  <script>
+    $(document).ready(function() {
+      var current = Resource.load('current');
+      current.data = null;
+      current.put();
+      Resource.delete('selected-comments');
+    });
+  </script>
+{% endblock %}
+
+{% block content %}
+  <p class="center">
+    {% trans 'Labis naming pinahahalagahan ang iyong kontribusyon. Maraming salamat sa inyong pagsagot.' %}
+  </p>
+  {% url 'pcari:landing' as next_link %}
+  {% include 'nav-buttons.html' with next_label=_('Tapos') %}
+{% endblock %}
