@@ -71,7 +71,7 @@
   <div class="container">
     <p class="center">
       {% blocktrans trimmed %}
-        Hindi sapilitan ang pagsagot sa lahat ng item sa pahinang ito. Hindi rin papangalanan ang iyong mga tugon.
+        Mangyaring sagutin ang hinihingi ng bawat item sa ibaba.
       {% endblocktrans %}
     </p>
   <table style="margin: 0 auto;">
@@ -98,12 +98,12 @@
         </td>
       </tr> -->
       <tr>
-        <td>{% trans 'Tanggapan' %}</td>
+        <td>{% trans 'Kategorya' %}</td>
         <td>
           <select id="sector">
-            <option value="" selected>{% trans 'Piliin ang tanggapan' %}</option>
-            <option value="Academic">{% trans 'Academic' %}</option>
-            <option value="Non-academic">{% trans 'Non-academic' %}</option>
+            <!--<option value="" selected>{% trans 'Piliin ang tanggapan' %}</option>-->
+            <option value="Academic" selected>{% trans 'Academic Employee' %}</option>
+            <option value="Non-academic">{% trans 'Non-academic Employee' %}</option>
             <option value="Student">{% trans 'Student' %}</option>
           </select>
         </td>
