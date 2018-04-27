@@ -19,7 +19,7 @@
 {% block content %}
   <div>
     <p class="center">
-
+      {% trans 'POGI SI KA-RONALD' %}
     </p>
     <p class="center">
       {% blocktrans trimmed %}
