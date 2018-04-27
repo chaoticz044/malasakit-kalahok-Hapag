@@ -19,7 +19,7 @@
     {% endblocktrans %}
   <p>
     {% blocktrans trimmed %}
-   Mag-click ng isang icon upang makita ang suhestiyon ng ipang kalahok. Tulad ng una niyong ginawa, i-rate ang bawat pahayag mula isa hanggang anim, kung saan ang isa ay kumakatawan sa lubos na di sumasang-ayon at ang anim ay kumakatawan sa lubos na sumasang-ayon. Upang makapagpatuloy, i-click ang “Susunod” sa ibaba. 
+   Mag-click ng isang icon upang makita ang mungkahi ng ibang kalahok. I-rate ito ayon sa antas ng inyong pagsang-ayon. Kinakailangan niyong mag-rate ng dalawang mungkahi upang makapagpatuloy. Pagkatapos nito, i-click ang "Susunod" sa ibaba. 
     {% endblocktrans %}
   </p>
   <div id="notice"></div>
@@ -34,8 +34,8 @@
       <div class="range-container">
         <input id="quantitative-input" target-id="comment-rating" type="range"
                value="1" step="1" min="1" max="6">
-        <span class="left-anchor">{% trans 'Hindi nakatutulong' %}</span>
-        <span class="right-anchor">{% trans 'Nakatutulong' %}</span>
+        <span class="left-anchor">{% trans 'Lubos na di sumasang-ayon' %}</span>
+        <span class="right-anchor">{% trans 'Lubos na sumasang-ayon' %}</span>
       </div>
       <p>
         {% trans 'Ang iyong sagot: ' %} <output id="quantitative-output"></output>.

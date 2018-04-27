@@ -19,12 +19,14 @@
         var score = ratings[id];
         if (score !== SKIPPED) {
           $('#answer-' + id).text(score);
-          if (score < 1) {
+          if (score <= 1) {
             var emoticon = '/img/red-emoticon.png';
-          } else if (score < 2) {
+          } else if (score <= 2) {
+            var emoticon = '/img/orange.png';
+          } else if (score <= 3) {
             var emoticon = '/img/yellow-emoticon.jpg';
           } else {
-            var emoticon = '/img/green-emoticon.png'
+            var emoticon = '/img/green-emoticon.png';
           }
           $('#answer-' + id).parent().prepend($('<img>').attr('src', STATIC_URL_ROOT + emoticon));
         } else {
